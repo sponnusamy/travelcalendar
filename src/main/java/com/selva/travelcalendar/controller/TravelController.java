@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.selva.travelcalendar.model.Travel;
 
+import com.fasterxml.jackson.databind.module.SimpleModule;
+
 @RestController
 public class TravelController {
 	

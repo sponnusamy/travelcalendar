@@ -2,7 +2,11 @@ package com.selva.travelcalendar.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import ch.qos.logback.core.util.Duration;
+
 import java.sql.Timestamp;
+import java.time.LocalTime;
 import java.util.List;
 
 /**
@@ -15,7 +19,7 @@ public class Contact implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private String id;
+	private long id;
 
 	private int age;
 
@@ -48,11 +52,11 @@ public class Contact implements Serializable {
 	public Contact() {
 	}
 
-	public String getId() {
+	public long getId() {
 		return this.id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -102,6 +106,8 @@ public class Contact implements Serializable {
 
 	public void setLastUpdatedBy(Contact lastUpdatedBy) {
 		this.lastUpdatedBy = lastUpdatedBy;
+		
+		java.time.Duration.s
 	}
 
 	public List<ContactDetail> getContactDetails() {
